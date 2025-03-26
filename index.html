@@ -88,6 +88,18 @@
           font-size: 20px;
           line-height: 1.6;
         }
+
+        @keyframes wiggle {
+          0% { transform:translateY(-50%, 0px); }
+          100% { transform:translate(-50%, 10px); }
+        }
+        #scrollLabel {
+          position:absolute;
+          left: 50%;
+          color: #636363;
+          transform: translateX(-50%);
+          animation: wiggle 0.5s ease 0.1s infinite alternate;
+        }
     </style>
 </head>
 <body>
@@ -98,11 +110,14 @@
       <br><br><br><br><br><br>
       <br><br><br><br><br><br>
       <br><br><br><br><br><br>
+      <br><br><br><br><br><br>
+      <br><br><br><br><br><br>
+      <p class="scroll" id="scrollLabel">--- Scroll Down ---</p>
     </div>
       <div class='container' data-aos='fade-up'>
         
-        <p>A simple Chrome extension combining a To-Do list and a Pomodoro timer.</p>
-        <a href="https://drive.google.com/uc?export=download&id=1PBh6BBHz4Opy7XCm8oEVC1WLWLrl6PtN" class="btn">Download Here</a>
+        <p>A simple, minimalistic Chrome extension combining a To-Do list and a Pomodoro timer.</p>
+        <a href="https://drive.google.com/uc?export=download&id=1K8-EcYISsFc8GR5FXVisAwG7Ep9C02Cf/" class="btn">Download Here</a>
       </div>
       <br><br><br><br><br><br><br>
 
@@ -110,30 +125,53 @@
         <h2>Installation Instructions</h2>
       <br><br><br><br><br><br><br><br>
 
+
         <div class="instruction-block" data-aos="fade-up">
             <div class="instruction-text">
-                <p>1. Open <code>chrome://extensions</code></p>
+                <p>1. Open File Explorer and extract the files. </p>
             </div>
             <div class="instruction-image">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_NFrBkr-fI_IwQY_uoESZi1tppCorifPWzA&s" alt="Open chrome://extensions">
+                <img src="extractall.png" alt="Extract all the files.">
             </div>
         </div>
 
+
+  
       <div class="instruction-block" data-aos="fade-up" data-aos-delay="400" style="display: flex; justify-content: flex-end; align-items: center;">
+        <div class="instruction-image">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_NFrBkr-fI_IwQY_uoESZi1tppCorifPWzA&s" alt="Open chrome://extensions">
+        </div>
+        <div class="instruction-text" style="text-align: right; margin-left: 20px;">
+            <p>2. Open <code>chrome://extensions</code></p>
+        </div>
+      </div>
+
+
+      <div class="instruction-block" data-aos="fade-up">
+        <div class="instruction-text">
+          <p>3. Enable Developer Mode</p>
+        </div>
         <div class="instruction-image">
           <img src="developermode.png" alt="Enable Developer Mode">
         </div>
+      </div>
+
+
+      <br><br><br>
+      <div class="instruction-block" data-aos="fade-up" data-aos-delay="400" style="display: flex; justify-content: flex-end; align-items: center;">
+        <div class="instruction-image">
+          <img src="loadunpacked.png" alt="Load unpacked folder">
+        </div>
         <div class="instruction-text" style="text-align: right; margin-left: 20px;">
-          <p>2. Enable Developer Mode</p>
+          <p>4. Click "Load Unpacked" and upload the extracted folder.</p>
         </div>
       </div>
-      <br><br><br><br><br>
+
+
       <div class="instruction-block" data-aos="fade-up" data-aos-delay="600">
         <div class="instruction-text">
-          <p>3. Drag and drop the CRX file into the page.</p>
         </div>
         <div class="instruction-image" style='margin-left: 20px;'>
-          <img src="draganddrop.png" alt="Drag and drop CRX file">
         </div>
       </div>
     </div>
